@@ -1,0 +1,144 @@
+* { 
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%; /* 62.5 * 16px / 100 = 10px */
+    font-family: helvetica,arial,sans-serif;
+}
+body {
+    margin: 0;
+}
+nav {
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 3.6rem;
+    max-width: 132rem;
+    margin: auto;
+    
+}
+.nav_wrapper {
+    border-bottom: 1px solid gray;
+}
+nav, nav div, nav ul {
+    display: flex;
+    align-items: center;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+nav ul ul {
+    display: block;
+}
+nav ul a {
+    text-decoration: none;
+    color: inherit;
+}
+h3 {
+    margin: 0;
+}
+.burgermenu {
+    width: 2.8rem;
+    height: 2.8rem;
+    object-fit: contain;
+}
+.menu-principal {
+    font-size: 2rem;
+    letter-spacing: -.8px;
+}
+.menu-principal li {
+    margin-left: 3rem;
+    font-weight: 700;
+}
+.menu-secundario {
+    font-size: 12px;
+    letter-spacing: -.2px;
+    color: #777;
+    text-transform: uppercase;
+}
+.menu-secundario ul {
+    display: none;
+}
+.menu-secundario li {
+    display: flex;
+    align-items: center;
+}
+.menu-secundario li + li {
+    margin-left: 3rem;
+}
+
+.secao-principal {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 1fr 1fr 1fr 1fr */
+    grid-template-areas: "primeira-coluna primeira-coluna segunda-coluna terceira-coluna";
+    grid-template-rows: 1fr;
+    max-width: 132rem;
+    padding: 0 3.6rem;
+    margin: auto;
+
+}
+.secao-principal > div {
+    height: 50rem;
+}
+.primeira-coluna {
+    grid-area: primeira-coluna;
+}
+.segunda-coluna {
+    grid-area: segunda-coluna;
+}
+.terceira-coluna {
+    grid-area: terceira-coluna;
+}
+
+.secao-principal .primeira-coluna div:first-of-type .destaque {
+    font-size: 5rem;
+}
+.secao-principal .destaque img {
+    flex-basis: 100%;
+    height: 9.7rem;
+    object-fit: cover;
+}
+.secao-principal .primeira-coluna > div:first-of-type article {
+    font-size: 1.6rem;
+    margin-bottom: .8rem;
+}
+.secao-principal article:not(.destaque) {
+    margin-top: 1.3rem;
+}
+.secao-principal article:not(.destaque) h3:before {
+    content: "●";
+    color: rgba(0,0,0,.3);
+}
+.secao-principal .primeira-coluna div:nth-of-type(2) .destaque,
+.secao-principal .primeira-coluna div:nth-of-type(3) .destaque,
+.secao-principal .segunda-coluna .destaque,
+.secao-principal .terceira-coluna .destaque {
+    font-size: 2rem;
+}
+.secao-principal div article {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.secao-principal .primeira-coluna > div:nth-of-type(2),
+.secao-principal .primeira-coluna > div:nth-of-type(3) {
+    display: flex;
+}
+
+.secao-principal .primeira-coluna > div + div {
+    border-top: 1px solid rgba(0,0,0,.3);
+}
+
+.secao-principal .primeira-coluna .coluna_interna {
+    padding: 2.1rem 1.3rem;
+}
+
+.secao-principal .segunda-coluna,
+.secao-principal .terceira-coluna {
+    padding: 2.1rem
+}
+.secao-principal .segunda-coluna article + .destaque,
+.secao-principal .terceira-coluna article + .destaque {
+    margin-top: 5rem;
+}
