@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding-top: 65px;
+}
+
+nav {
+    top: 0;
+    position: fixed;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: white;
+    box-shadow: 0px 3px 4px rgba(0,0,0,0.3);
+}
+nav div {
+    display: flex;
+    align-items: center;
+}
+nav button + button {
+    margin-left: 13px;
+}
+
+.profile {
+    border-radius: 50%;
+    margin-left: 13px;
+}
+
+.destaque {
+    margin-top: 259px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "principal principal secundario secundario secundario"
+                         "principal principal secundario secundario secundario";
+}
+
+.destaque-principal {
+    grid-area: principal;
+}
+.destaque-secundario {
+    grid-area: secundario;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+main header {
+    display: flex;
+}
+main header a + a {
+    margin-left: 13px;
+}
+
+.materias {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.logo_wrapper {
+    position: relative;
+}
+.logo_wrapper ul {
+    opacity: 0;
+    transition: opacity .3s;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+}
+.logo_wrapper:hover ul {
+    opacity: 1;
+}

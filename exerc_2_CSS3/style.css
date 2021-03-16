@@ -1,0 +1,197 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+Pre
+
+*{
+    box-sizing: border-box;
+}
+
+nav{
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: chocolate;
+    box-shadow: 0px 3px 4px brown;
+}
+
+nav div{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+nav div a+a{
+    margin-left: 150px;
+}
+
+.horizontal-list{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.titulos{
+    margin-top: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.themain{
+    padding-inline-start: 50px;
+    padding-top: 50px;
+    display: grid;
+    background: rgb(194, 93, 93);
+    height: 480px;
+    grid-template-columns: repeat(2, 120px 220px) 450px;
+    grid-template-rows: repeat(2, 1FR);
+    grid-template-areas: "foto1 palavra1 foto2 palavra2 gfoto gfoto"
+                         "foto3 palavra3 foto4 palavra4 gfoto gfoto"
+                         "foto5 palavra5 foto6 palavra6 grandp grandp"
+}
+
+.pic1{
+    grid-area: foto1;
+}
+.pic2{
+    grid-area: foto2;
+}
+.pic3{
+    grid-area: foto3;
+}
+.pic4{
+    grid-area: foto4;
+}
+.pic5{
+    grid-area: foto5;
+}
+.pic6{
+    grid-area: foto6;
+}
+.picbig{
+    grid-area: gfoto;
+}
+
+.para1{
+    grid-area: para1;
+}
+.para2{
+    grid-area: para2;
+}
+.para3{
+    grid-area: foto3;
+}
+.para4{
+    grid-area: para4;
+}
+.para5{
+    grid-area: para5;
+}
+.para6{
+    grid-area: para6;
+}
+.parabig{
+    grid-area: grandp;
+}
+
+.short-part{
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: grid;
+    height: 500px;
+    background: rgb(155, 65, 65);
+    grid-gap: 40px;
+    grid-template-columns: 2fr 450px;
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-areas: "title1  tiltle2"
+                         "palavraum  links"
+                         "palavradois  links"
+                         "palavradois  links"
+                         "palavratres  links"
+}
+
+.bigtitile{
+    grid-area: title1;
+}
+.palavraum{
+    grid-area: paragraf1;
+}
+.palavradois{
+    grid-area: paragraf2;
+}
+.palavratres{
+    grid-area: paragraf3;
+}
+.smalltitle{
+    grid-area: tiltle2;
+}
+.linkat{
+    grid-area: links;
+    font-size: larger;
+}
+
+footer{
+    height: 50px;
+    background-color: brown;
+}
+.color{
+    padding-top: 15px;
+    font-size: 22px;
+    color: burlywood;
+    text-align: center;
+}
